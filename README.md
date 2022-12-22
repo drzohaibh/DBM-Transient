@@ -6,7 +6,7 @@ This repository provides the Matlab implementation of the DBM Transient for seiz
 The project is separated into three subfolders, corresponding to the two different datasets (Bonn and C301). The data set and their extracted features are stored in Data folder. The first two subfolder contain similar files, and should allow for a complete training of the model on the specific dataset. 
 In addition, DBM-Transient and DBM-Converged are trained in Matlab environment. Whereas rest of the methods (KPCA, Isomap, t-SNE and UMAP) are written in Python environment. 
 
-All the folder are structured as follows:
+Folders are structured as follows:
 
 - File Data_preprocessing.py is to extract the features from raw data.
 - File DBM_train.m is to train the DBM-transient and DBM-Coverged methods.
@@ -17,7 +17,7 @@ All the folder are structured as follows:
 
 ## Getting Help
 
-For any other additional information, you can email me at dpyang[AT]zhejianglab[DOT]com
+For any other additional information, you can email at dpyang[AT]zhejianglab[DOT]com
 
 ## License
 
