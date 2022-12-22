@@ -15,3 +15,10 @@ All the folder are structured as follows:
 - File SVM+Fisher_Discriminiant.py is to evaluate the methods using SVM and Fisher Discriminant function.
 - File measure_bar.py is to draw the bar plots for different methods.
 
+## Getting Help
+
+For any other additional information, you can email me at .
+
+## License
+
+All source code from this project is released under the MIT license.
