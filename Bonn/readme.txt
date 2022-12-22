@@ -13,7 +13,7 @@
 2. Code:
 
       Data_preprocessing.py: 	Bonn dataset is processed by Discrete Wavelet Transform and calculated the input feature,
-                              which are saved in Bonn.mat.
+                              which are saved in Bonn.mat in Bonn_data folder.
 
                 DBM_train.m: 	Using the DBM model to train Bonn data, we can get 2 to 10-dimensional outputs, respectively.
                              	Please change value c for different cases.
