@@ -26,7 +26,7 @@
 
      Sum      258                               3186.6                     912.4
 
-     	We combine all 19 patients from the c301 datasets into seizure, non-seizure-1, non-seziure-2 by choosing the more clean dataset with 4s windows at
+     	We combine all 19 patients from the c301 datasets into seizure, non-seizure-1, and non-seziure-2 by choosing the more clean dataset with 4s windows at
      	the start of seizure/non-seizure by sliding_window.m.             (non-seizure, seizure) = (9992, 757)
 	The read_data.m can be used to read and analyze the C301 raw data.
 	*We have not uploaded the entire C301 raw data because of space limitation on github. 
