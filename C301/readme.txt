@@ -26,17 +26,15 @@
 
      Sum      258                               3186.6                     912.4
 
-     	We combine all 19 patients from the c301 datasets into "patient_1-19" by choosing the more clean dataset with 4s windows at
+     	We combine all 19 patients from the c301 datasets into seizure, non-seizure-1, non-seziure-2 by choosing the more clean dataset with 4s windows at
      	the start of seizure/non-seizure by sliding_window.m.             (non-seizure, seizure) = (9992, 757)
 	The read_data.m can be used to read and analyze the C301 raw data.
-	* We have not uploaded the entire C301 raw data because of space limitation on github. However, We have uploaded the feature matrix
-	i.e. c301_x.mat in "C301-data" folder. 
+	*We have not uploaded the entire C301 raw data because of space limitation on github. 
 	
 
 2. Code:
 
-      Data_preprocessing.py:	c301 datasets are processed by Discrete Wavelet Transform and calculated the input feature
-                              	under c301_x.mat and it is already saved in "C301-data".
+      Data_preprocessing.py:	c301 datasets are processed by Discrete Wavelet Transform.
 
                 DBM_train.m: 	Please use the DBM model to train C301 data for 2 to 10-dimensional outputs.
                               	Each layer of training is performed in RBM1--RBM2--RBM3--RBM4 ----> *.m, and one can get
