@@ -17,7 +17,7 @@ All the folder are structured as follows:
 
 ## Getting Help
 
-For any other additional information, you can email me at .
+For any other additional information, you can email me at dpyang@zhejianglab.com
 
 ## License
 
