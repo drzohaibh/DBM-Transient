@@ -26,30 +26,32 @@
 
      Sum      258                               3186.6                     912.4
 
-     	We combine all 19 patients from the c301 datasets into"patient_1-19 by choosing the more clean dataset with 4s windows at
+     	We combine all 19 patients from the c301 datasets into "patient_1-19" by choosing the more clean dataset with 4s windows at
      	the start of seizure/non-seizure by sliding_window.m.             (non-seizure, seizure) = (9992, 757)
 	The read_data.m can be used to read and analyze the C301 raw data.
+	* We have not uploaded the entire C301 raw data because of space limitation on github. However, We have uploaded the feature matrix
+	i.e. c301_x.mat in "C301-data" folder. 
 	
 
 2. Code:
 
       Data_preprocessing.py:	c301 datasets are processed by Discrete Wavelet Transform and calculated the input feature
-                              under c301_x.mat.
+                              	under c301_x.mat and it is already saved in "C301-data".
 
                 DBM_train.m: 	Please use the DBM model to train C301 data for 2 to 10-dimensional outputs.
-                              Each layer of training is performed in RBM1--RBM2--RBM3--RBM4 ----> *.m, and one can get
-                              the result of two states['transient', 'converged']
-                              All of the results shall be saved under "Different_dimension".
+                              	Each layer of training is performed in RBM1--RBM2--RBM3--RBM4 ----> *.m, and one can get
+                              	the result of two states['transient', 'converged']
+                              	All of the results shall be saved under "Different_dimension".
 
           Contrast_model.py: 	The code in this part includes four training models: ['KPCA', 'Isomap', 't-SNE', 'UMAP'], 
-					KPCA, Isomap, and UMAP can generate dimensions from 2 to 10, and t-SNE can generate dimensions from 2 to 3.
-                              All of the results shall be saved under "Different_dimension".
+				KPCA, Isomap, and UMAP can generate dimensions from 2 to 10, and t-SNE can generate dimensions from 2 to 3.
+                              	All of the results shall be saved under "Different_dimension".
 
 SVM+Fisher_Discriminiant.py: 	SVM and Fisher discriminant are used to evaluate results from Different_dimensions, and all
-                              of the results shall be saved under "Evaluation_results."
+                             	of the results shall be saved under "Evaluation_results."
 
         2D_visualization.py: 	The 2D data can be used to visualize the output results for all 6 methods.
                       
 
                 measure_bar: 	In order to evaluate the performance of different dimensions, bar plots are used, 
-					which shall save the results in "Evaluation_results/Result_bar".
+				which shall save the results in "Evaluation_results/Result_bar".
