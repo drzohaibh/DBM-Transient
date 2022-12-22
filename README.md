@@ -8,10 +8,10 @@ In addition, DBM-Transient and DBM-Converged are trained in Matlab environment. 
 
 All the folder are structured as follows:
 
-File train.py is the main training script, implementing the training/eval loop of the model.
-File config.py contains the model's configuration settings, structured as a Python dictionary.
-File prior.py contains all the prior of the adversarial autoencoder taht have been considered during the developement of the model. Some of the prior are not actually used in the final model.
-File model.py contains the implementation of the layers of the AbsAE and ReL models.
-File loss.py contains the implementations of all the losses used during training.
-File log.py contains a collections of logging functions used to produce the final results and to check the progress of training.
-File dataset.py contains the implementation of the dataset object and all data-related utilities.
+File Data_preprocessing.py is to extract the features from raw data.
+File DBM_train.m is to train the DBM-transient and DBM-Coverged methods.
+File Contrast_model.py is to train the KPCA, Isomap, t-SNE and UMAP methods.
+File 2D_visualization.py is to plot 2D representation of low dimensional features.
+File SVM+Fisher_Discriminiant.py is to evaluate the methods using SVM and Fisher Discriminant function.
+File measure_bar.py is to draw the bar plots for different methods.
+
