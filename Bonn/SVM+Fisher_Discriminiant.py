@@ -10,16 +10,19 @@ import os
 def Fisher(M, D, main_data, non_sei, sei):
     mean_A = main_data[0:non_sei, :].mean(axis=0)
     mean_E = main_data[non_sei:non_sei + sei, :].mean(axis=0)
-    sw = 0
+    sw_1 = 0
+    sw_2 = 0
     for i in range(non_sei):
         reducemean_A = main_data[i, :] - mean_A
-        sw_1 = np.matmul(reducemean_A[:, np.newaxis], reducemean_A[:, np.newaxis].T)
-        sw += sw_1
-        if i < sei:
-            reducemean_E = main_data[i + non_sei, :] - mean_E
-            sw_2 = np.matmul(reducemean_E[:, np.newaxis], reducemean_E[:, np.newaxis].T)
-            sw += sw_2
-    sw = np.divide(sw, (non_sei + sei))
+        sw = np.matmul(reducemean_A[:, np.newaxis], reducemean_A[:, np.newaxis].T)
+        sw_1 += sw
+    sw_1 = np.divide(sw_1, non_sei)
+    for i in range(sei):
+        reducemean_E = main_data[i + non_sei, :] - mean_E
+        sw = np.matmul(reducemean_E[:, np.newaxis], reducemean_E[:, np.newaxis].T)
+        sw_2 += sw
+    sw_2 = np.divide(sw_2, sei)
+    sw = sw_1+sw_2
     w = np.matmul(np.linalg.inv(sw), (mean_E - mean_A)[:, np.newaxis])
     sb = np.matmul((mean_E - mean_A)[:, np.newaxis], (mean_E - mean_A)[:, np.newaxis].T)
     jw = np.matmul(np.matmul(w.T, sb), w) / np.matmul(np.matmul(w.T, sw), w)
